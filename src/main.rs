@@ -30,7 +30,6 @@ enum Message {
     Previous,
     ExplainToggled(bool),
     ThemeSelected(Theme),
-    Edit(text_editor::Action),
 }
 
 impl Layout {
@@ -51,11 +50,6 @@ impl Layout {
             }
             Message::ThemeSelected(theme) => {
                 self.theme = theme;
-            }
-            Message::Edit(action) => {
-                // Handle the edit action here
-                // For now, we just print the action
-                println!("{:?}", action);
             }
         }
     }
